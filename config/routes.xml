@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://symfony.com/schema/routing
+        http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="blog_list" controller="App\Controller\BlogController::list" path="/blog/{page}">
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+
+    <route id="blog_show" controller="App\Controller\BlogController::show" path="/blog/{slug}">
+
+    </route>
+
+    <route id="article_show"
+           path="/articles/{_locale}/{year}/{slug}.{_format}"
+           controller="App\Controller\ArticleController::show">
+        <default key="_format">html</default>
+        <requirement key="_locale">en|fr</requirement>
+        <requirement key="_format">html|rss</requirement>
+        <requirement key="year">\d+</requirement>
+    </route>
+</routes>

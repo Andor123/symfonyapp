@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Post #{{ page }}</title>
+    <style>
+        h1 {
+            color: green;
+            font-size: 50px;
+        }
+        p {
+            text-align: justify;
+            color: green;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+{% if page == 1 %}
+    <h1>Blog Post #{{ page }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla at tempor turpis. Nunc interdum at nisi vestibulum pellentesque.
+        Integer dictum sollicitudin dapibus.
+        Nulla id libero non elit pulvinar fringilla nec vitae massa.
+        Nulla facilisi. Nulla risus nisl, posuere non blandit eu, convallis vitae libero.
+        Mauris aliquet vestibulum sapien nec pretium.
+        Maecenas bibendum felis scelerisque sem eleifend cursus.
+        Praesent a fermentum mauris.</p>
+{% endif %}
+{% if page == 2 %}
+    <h1>Blog Post #{{ page }}</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Suspendisse ut diam in velit dictum consequat eget eget ligula.
+        Duis quis mattis libero. Nulla facilisi.
+        Sed gravida augue eu ligula semper rutrum.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Duis dictum lacinia ipsum in pulvinar.
+        Quisque metus leo, molestie vel vestibulum quis, vulputate sit amet lacus.
+        Nulla lectus lectus, porttitor eget aliquet nec, vulputate eu nisl.</p>
+{% endif %}
+</body>
+</html>

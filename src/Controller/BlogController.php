@@ -12,9 +12,9 @@ class BlogController extends Controller
      * @Route("/blog/{page}", name="blog_list", requirements={"page"="\d+"})
      */
     public function list($page = 1) {
-        return new Response(
-            '<html><body>' . $page . '</body></html>'
-        );
+        return $this->render('blog/blog.html.twig', array(
+            'page' => $page
+        ));
     }
 
     /**
